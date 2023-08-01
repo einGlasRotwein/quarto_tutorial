@@ -1,0 +1,15 @@
+project:
+  type: book
+
+book:
+  title: "Quarto Tutorial"
+  author: "Juli Nagel"
+  date: today
+  chapters:
+    - index.qmd
+    - 01_quarto_setup.qmd
+    - 02_basics.qmd
+
+format:
+  html:
+    theme: solar
