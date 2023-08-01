@@ -1,0 +1,19 @@
+
+# Preface {.unnumbered}
+
+Dieses Dokument ist eine kleine Demo von [Quarto](https://quarto.org/), einem Tool, um reproduzierbare Manuskripte zu erstellen.
+Im Workshop habe ich euch live gezeigt, was Quarto kann - hier ist alles noch mal ausführlicher "zum Nachkochen" festgehalten.
+
+## Grundlegendes
+
+Die Logik von Quarto (und reproduzierbaren Manuskripten) ist: Daten, Analyse und Manuskript sind verknüpft.
+In einem "herkömmlichen" Manuskript rechnen wir Analysen mit unseren Daten, und müssen die Ergebnisse dann mühevoll in unser Manuskript kopieren. 
+Das bedeutet: Mittelwerte, Standardabweichungen, Freiheitsgrade, t-Werte, p-Werte, Konfidentintervalle etc. müssen eingefügt werden. 
+Das ist nicht nur fehleranfällig, sondern auch sehr aufwändig. 
+Selbst, wenn ich den Analysecode erneut laufen lasse (z.B. wenn ich einen Fehler gemacht habe oder die Datenquelle sich ändert), bleiben die Werte im Manuskript, wie sie sind.
+Bei einem reproduzierbaren Manuskript sind meine Analysen direkt ins Manuskript eingebettet, das heißt: 
+Wenn ich meine Analysen ändere, ändern sich auch die entsprechenden Werte im Manuskript (dafür muss ich das Manuskript nur neu "rendern").
+
+Ein reproduzierbares Manuskript besteht immer aus (mindestens) zwei Dateien: 
+Erstens eine Datei, die den Code für das Manuskript enthält (z.B. ein Quarto-Dokument mit der Dateiendung `.qmd`).
+Und zweitens eine Output-Datei, die das fertig "gerenderte" Dokument enthält (das kann so wie hier eine html-Datei sein, oder aber eine PDF, ein Word-Dokument ...).
