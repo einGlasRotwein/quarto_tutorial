@@ -1,0 +1,99 @@
+
+## Basics
+
+### Source vs. Visual Editor
+
+Kurz zu den verschiedenen Editoren in Quarto. 
+Oben in der Menüleiste könnt ihr zwischen "Source" und "Visual" wechseln. 
+Ihr könnt das ja mal ausprobieren und schauen, was der Effekt ist. 
+Der Source Editor wirkt erst mal "roher" und "hässlicher" - außerdem fällt auf, dass ihr im Visual Editor oben zusätzliche Optionen habt, z.B. zum Einfügen von Bildern etc.
+Grundsätzlich empfinden viele den Visual Editor bestimmt als komfortabler (ist er ja objektiv auch), aber manchmal gibt es spezifische, kniffligere Formatierungs-Dinge, die sich besser (oder ggf. ausschließlich) im Source Editor umsetzen lassen.
+An sich ist es auch kein Problem, zwischen den Editoren nach Bedarf hin und her zu wechseln.
+Es *kann* jedoch passieren, dass der Visual Editor euren Source Code minimal ändert. 
+Meistens hat das keine sichtbaren Effekte in eurer Output-Datei (der Visual Editor findet einfach einen anderen Weg, dieselbe Sache in Form von Code umzusetzen) - in seltenen Fällen kann jedoch auch mal was zerschossen werden (Thema "spezifische, kniffligere Formatierungs-Dinge").
+
+Nutzt ruhig, was auch immer euch eher liegt oder wechselt hin und her, wie ihr mögt (um z.B. bequem eine Referenz über den Visual Editor einzufügen).
+Das ist nur ein Hinweis für den seltenen Fall, dass doch mal was kaputt gehen sollte.
+
+### Text-Formatierung
+
+Viele Formatierungs-Optionen sind auch über den Visual-Editor verfügbar, indem ihr den gewünschten Text markiert und oben im Menü unter "Format" die Formatierung eurer Wahl auswählt. 
+Ich zeige euch hier aber, wie der Code dahinter funktioniert. 
+Wenn ihr den Source-Editor verwendet, braucht ihr den "rohen Code". 
+Wenn ihr den Visual-Editor verwendet, könnt ihr trotzdem auch den Code eingeben. 
+In diesem Fall würde `**test**` dann automatisch umgewandelt werden zum fettgedruckten **test**.
+
+#### Überschriften
+
+Text-Formatierung funktioniert nach Markdown-Prinzipien. 
+So wird eine Überschrift (Level 1, also das höchste Level) mit `#` gekennzeichnet. 
+Eine Überschrift auf Level 2 wird mit `##` erstellt, eine Überschrift auf Level 3 wird mit `###` erstellt - und so weiter. 
+Ihr könnt z.B. folgenden Code in eurem Quarto-Dokument ausprobieren:
+
+```markdown
+# Große Überschrift
+
+Hier steht Text.
+
+## Ein Level tiefer
+### Noch ein Level tiefer
+
+Hier ist mehr Text.
+```
+
+#### Auszeichnungsarten
+
+- *Kursiven Text* könnt ihr mit einfachen Sternchen erstellen: `*Das ist kursiver Text*`.
+- **Fettgedruckten Text** erzeugt ihr mit doppelten Sternchen: `**Das ist fett gedruckter Text**`.
+- Hochgestellter Text^x^ geht so: `Das x ist hochgestellt^x`.
+- Tiefgestellter Text~y~ geht so: `Das y ist tiefgestellt~y~`.
+- Code (so wie ich es hier in den Beispielen nutze) könnt ihr mit Backticks formatieren: `` `Code` `` wird zu `Code`.
+
+#### Listen
+
+* Unten findet ihr
+    + den Code
+    + der diese Liste
+        - erzeugt
+
+```markdown
+* Unten findet ihr
+    + den Code
+    + der diese Liste
+        - erzeugt
+```
+
+#### Tabellen
+
+Einfache Tabellen könnt ihr folgendermaßen erstellen:
+
+```markdown
+| Hier |  eine  | Tabelle |
+|------|--------|---------|
+|  12  | Spalte |   2.5   |
+| 123  |   mit  |  12.2   |
+|   1  |  Text  | 823.0   |
+```
+
+| Hier |  eine  | Tabelle |
+|------|--------|---------|
+|  12  | Spalte |   2.5   |
+| 123  |   mit  |  12.2   |
+|   1  |  Text  | 823.0   |
+
+Über den visual Mode könnt ihr Tabellen einfach einfügen, ohne den Code für die Tabelle händisch erstellen zu müssen.
+Wenn die Tabelle aus euren Daten besteht, ist das aber immer noch unpraktisch, bzw. bedeutet viel Copy-Paste-Arbeit. 
+Man kann Tabellen daher auch direkt aus den Daten erstellen - dazu aber später mehr.
+
+#### Gleichungen
+
+Gleichungen stehen innerhalb von `$`-Zeichen ($\LaTeX$-Nutzer werden das kennen).
+Ihr könntet also so etwas schreiben wie `$\alpha = .05$` ($\alpha = .05$), oder $\beta_{123} = 12^3$.
+Auch Mittelwert und Standardabweichung kann man so angeben: `$M = 2.45, SD = 0.32$` wird zu $M = 2.45, SD = 0.32$. 
+Auch hier gilt: Das ist immer noch zu viel unbequeme manuelle Arbeit. 
+Wir schauen uns später `R`-Pakete an, die uns das Leben leichter machen.
+
+### Andere Sprachen
+
+Innerhalb einer html-Datei könnt ihr natürlich auch immer html-Code verwenden, so könntet ihr beispielsweise auch Text via html fett schreiben: `<b>fettgedruckter Text</b>` wird zu <b>fettgedruckter Text</b>.
+Auch roher $\LaTeX$-Code ist möglich (braucht ihr ggf. in Spezialfällen, wenn ihr eine PDF erstellen wollt).
