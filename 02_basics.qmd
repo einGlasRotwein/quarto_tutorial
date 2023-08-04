@@ -15,6 +15,15 @@ Meistens hat das keine sichtbaren Effekte in eurer Output-Datei (der Visual Edit
 Nutzt ruhig, was auch immer euch eher liegt oder wechselt hin und her, wie ihr mögt (um z.B. bequem eine Referenz über den Visual Editor einzufügen).
 Das ist nur ein Hinweis für den seltenen Fall, dass doch mal was kaputt gehen sollte.
 
+### Der YAML-Header
+
+Zu Beginn eures neu erstellten Quarto-Dokuments findet ihr den sogenannten YAML-Header. 
+Dieser enthält allgemeine Einstellungen und Informationen zu eurem Dokument, z.B. was das Output-Format ist (z.B. html, docx ...), den Titel, Autor:in, das Datum ...
+Ihr könnt auch eine Bibliographie-Datei, also eine Liste mit Referenzen, angeben, oder einen bestimmten Style für euer Dokument angeben. 
+Ich werde nicht alle möglichen Einstellungen für den YAML-Header auflisten, sondern an den jeweiligen Stellen darauf verweisen, was in den Header gehört, damit ihr das gewünschte Ergebnis erzielt.
+
+![Einfacher YAML-Header. In diesem Beispiel enthält er nur den Titel und das Outputformat des Dokuments (html).](pics/yaml_header.png){#fig-new-chunk width=30%}
+
 ### Text-Formatierung
 
 Viele Formatierungs-Optionen sind auch über den Visual-Editor verfügbar, indem ihr den gewünschten Text markiert und oben im Menü unter "Format" die Formatierung eurer Wahl auswählt. 
@@ -26,7 +35,7 @@ In diesem Fall würde `**test**` dann automatisch umgewandelt werden zum fettged
 #### Überschriften
 
 Text-Formatierung funktioniert nach Markdown-Prinzipien. 
-So wird eine Überschrift (Level 1, also das höchste Level) mit `#` gekennzeichnet. 
+So wird eine Überschrift (Level 1, also das höchste Level) mit `#` gekennzeichnet[^ueberschrift]. 
 Eine Überschrift auf Level 2 wird mit `##` erstellt, eine Überschrift auf Level 3 wird mit `###` erstellt - und so weiter. 
 Ihr könnt z.B. folgenden Code in eurem Quarto-Dokument ausprobieren:
 
@@ -40,6 +49,8 @@ Hier steht Text.
 
 Hier ist mehr Text.
 ```
+
+[^ueberschrift]: Was im YAML-Header als "title" angegeben wurde, wird als Level 1 (`#`)-Überschrift behandelt. Ihr könnt daher normalerweise direkt ab Level 2 (`##`) starten. Nicht, dass es da strikte Vorgaben gäbe - ihr könnt auch ein Dokument erstellen, dass ausschließlich Level-3-Überschriften enthält.
 
 #### Auszeichnungsarten
 
